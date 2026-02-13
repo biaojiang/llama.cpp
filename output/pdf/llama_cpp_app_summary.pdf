@@ -1,0 +1,63 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 3280 >>
+stream
+BT /F1 13.0 Tf 0 0 0 rg 54 760 Td (What It Is) Tj ET
+BT /F1 10.5 Tf 0 0 0 rg 54 743 Td (  - llama.cpp is an open source C/C++ project for LLM inference with minimal setup and high) Tj ET
+BT /F1 10.5 Tf 0 0 0 rg 54 729 Td (    performance across CPUs and GPUs.) Tj ET
+BT /F1 10.5 Tf 0 0 0 rg 54 715 Td (  - It provides a core llama library plus runnable tools such as a CLI and an OpenAI-compatible) Tj ET
+BT /F1 10.5 Tf 0 0 0 rg 54 701 Td (    HTTP server.) Tj ET
+BT /F1 13.0 Tf 0 0 0 rg 54 681 Td (Who It's For) Tj ET
+BT /F1 10.5 Tf 0 0 0 rg 54 664 Td (  - Primary persona: developers and ML practitioners who want to run GGUF-based models locally or) Tj ET
+BT /F1 10.5 Tf 0 0 0 rg 54 650 Td (    in their own infrastructure.) Tj ET
+BT /F1 13.0 Tf 0 0 0 rg 54 630 Td (What It Does) Tj ET
+BT /F1 10.5 Tf 0 0 0 rg 54 613 Td (  - Runs LLM inference from a plain C/C++ implementation with broad hardware support.) Tj ET
+BT /F1 10.5 Tf 0 0 0 rg 54 599 Td (  - Supports quantization formats \(1.5-bit through 8-bit\) to reduce memory and improve speed.) Tj ET
+BT /F1 10.5 Tf 0 0 0 rg 54 585 Td (  - Offers multiple acceleration backends \(e.g., Metal, CUDA, Vulkan, SYCL, and CPU paths\).) Tj ET
+BT /F1 10.5 Tf 0 0 0 rg 54 571 Td (  - Ships user-facing executables including `llama-cli` and `llama-server`.) Tj ET
+BT /F1 10.5 Tf 0 0 0 rg 54 557 Td (  - Exposes an OpenAI-compatible REST API through `llama-server`.) Tj ET
+BT /F1 10.5 Tf 0 0 0 rg 54 543 Td (  - Supports both single-model inference mode and multi-model router mode in server docs.) Tj ET
+BT /F1 13.0 Tf 0 0 0 rg 54 523 Td (How It Works \(Repo-Evidence Architecture\)) Tj ET
+BT /F1 10.5 Tf 0 0 0 rg 54 506 Td (  - Core: `libllama` C-style interface in `include/llama.h`; tools are built on top of this) Tj ET
+BT /F1 10.5 Tf 0 0 0 rg 54 492 Td (    library.) Tj ET
+BT /F1 10.5 Tf 0 0 0 rg 54 478 Td (  - Server path: HTTP requests enter `server_http_context`, route through `server_routes`, become) Tj ET
+BT /F1 10.5 Tf 0 0 0 rg 54 464 Td (    `server_task`s in `server_queue`, run in `server_context`/`server_slot`, then return via) Tj ET
+BT /F1 10.5 Tf 0 0 0 rg 54 450 Td (    `server_response`.) Tj ET
+BT /F1 10.5 Tf 0 0 0 rg 54 436 Td (  - Execution model: `server_context` runs on a dedicated thread; HTTP workers handle request) Tj ET
+BT /F1 10.5 Tf 0 0 0 rg 54 422 Td (    parsing and JSON formatting.) Tj ET
+BT /F1 10.5 Tf 0 0 0 rg 54 408 Td (  - Data flow: prompt + model settings -> tokenization/scheduling/batching -> model) Tj ET
+BT /F1 10.5 Tf 0 0 0 rg 54 394 Td (    decode/sampling -> streamed or final response.) Tj ET
+BT /F1 13.0 Tf 0 0 0 rg 54 374 Td (How To Run \(Minimal\)) Tj ET
+BT /F1 10.5 Tf 0 0 0 rg 54 357 Td (  - 1. Build: `cmake -B build` then `cmake --build build --config Release`.) Tj ET
+BT /F1 10.5 Tf 0 0 0 rg 54 343 Td (  - 2. Get a GGUF model locally or use Hugging Face shortcut flags shown in README.) Tj ET
+BT /F1 10.5 Tf 0 0 0 rg 54 329 Td (  - 3. CLI example: `llama-cli -m my_model.gguf`.) Tj ET
+BT /F1 10.5 Tf 0 0 0 rg 54 315 Td (  - 4. Server example: `llama-server -hf ggml-org/gemma-3-1b-it-GGUF`.) Tj ET
+BT /F1 13.0 Tf 0 0 0 rg 54 295 Td (Not Found In Repo) Tj ET
+BT /F1 10.5 Tf 0 0 0 rg 54 278 Td (  - Formal product SLA / commercial support policy: Not found in repo.) Tj ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+3643
+%%EOF
