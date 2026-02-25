@@ -138,3 +138,7 @@ poetry.toml
 /.windsurf/
 # emscripten
 a.out.*
+
+# codex branch
+output/test.*
+output/*.aiff
